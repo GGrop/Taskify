@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300&display=swap');
+
+a, h1, h2, h3, span{
+    font-family: "Lato";
+    font-weight: 600;
+}
+
+.input{
+    display: flex;
+    width: 85%;
+    position: relative;
+    align-items: center;
+}
+.inputBox{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    border: none;
+    transition: 0.2s;
+    box-shadow: inset 0 0 5px black
+}
+.inputBox:focus{
+    box-shadow: 0 0 10px 1000px rgb(0, 0, 0, 0.5);
+    outline: none;
+}
+.inputSubmit{
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    margin: 12px;
+    border-radius: 50px;
+    right: 0px;
+    border: none;
+    font-size: 15px;
+    background-color: rgb(24, 24, 24);
+    color: white;
+    transition: 0.2s all;
+    box-shadow:  0 0 10px black;
+}
+.inputSubmit:hover{
+    background-color: rgb(48, 48, 48);
+}
+.inputSubmit:active{
+    transform:scale(0.8);
+    box-shadow: 0 0 5px black
+}
+.todos{
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    background-color:  rgb(138, 162, 228);
+}
+.todos_single{
+    display:flex;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    background-color: rgb(227, 230, 76);
+    transition: 0.2s;
+}
+.todos_single:hover{
+    box-shadow: 0 0 5px rgb(105, 105, 105);
+    transform: scale(1.01)
+}
+.todosSingleText{
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+}
+.icon{
+    margin-left:10px;
+    font-size: 25px;
+    cursor: pointer
+}
+.todoSingleText{
+    background-color: rgb(226, 228, 138);
+    border: none;
+    height: 25px;
+}
+.container{
+    display: flex;
+    width: 80%;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: flex-start
+}
+.todosHeading{
+    font-size: 30px;
+}
+.remove{
+    background-color: rgb(228, 138, 138);
+}
+
+.dragactive{
+    background-color: rgb(121, 150, 228);
+}
+.dragcomplete{
+    background-color: rgb(230, 120, 120);
+}
+.drag{
+    box-shadow: 0 0 20px black;
+}
+
+@media(max-width:700px){
+    .input{
+        width:95%
+    }
+    .todos{
+        width: 95%;
+        margin-bottom: 10px;
+    }
+    .container{
+        width: 95%;
+        flex-direction: column;
+    }
+}
+
